@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😳</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="calculator">
+    <header>
+      <div class="header-top">
+        <h1>CAS*O</h1>
+        <div id="display_top"></div>
+        <span>
+          <p>Dx 1/2</p>
+          <h2>16</h2>
+        </span>
+      </div>
+      <div class="header-bot" id="display_bot">
+        <div id="display_mode">
+          CC
+        </div>
+        <div id="display">0</div>
+      </div>
+    </header>
+    <main>
+      <div class="btns">
+        <div class="checkbox">
+          <input type="checkbox" name="" id="">
+          <input type="checkbox" name="" id="">
+        </div>
+        <div class="grid">
+          <button class="dark" id="feature">ON</button>
+          <button id="number">7</button>
+          <button id="number">8</button>
+          <button id="number">9</button>
+          <button class="dark" id="feature">AC</button>
+          <button id="number">4</button>
+          <button id="number">5</button>
+          <button id="number">6</button>
+          <button class="dark" id="feature">+/-</button>
+          <button id="number">1</button>
+          <button id="number">2</button>
+          <button id="number">3</button>
+          <button class="red" id="feature">C</button>
+          <button id="number">0</button>
+          <button id="number">000</button>
+          <button id="number">.</button>
+        </div>
+      </div>
+      <div class="btns">
+        <div class="flat grid grid-right">
+          <button class="dark" id="operator" disabled>></button>
+          <button class="dark" id="operator" disabled>MU</button>
+          <button class="dark" id="operator" disabled>GT</button>
+        </div>
+        <div class="grid grid-right">
+          <button class="dark" id="feature">%</button>
+          <button class="dark" id="operator" disabled>√</button>
+          <button class="dark" id="operator">MC</button>
+          <button class="dark" id="operator">×</button>
+          <button class="dark" id="operator">÷</button>
+          <button class="dark" id="operator" disabled>MR</button>
+          <button class="dark plus" id="operator">+</button>
+          <button class="dark" id="operator">-</button>
+          <button class="dark undo" id="operator">M-</button>
+        </div>
+        <span style="margin-left: 37%; gap: 2em; display: flex; margin-top: 2em;">
+          <button class="dark" id="operator">=</button>
+          <button class="dark redo" id="operator">M+</button>
+        </span>
+      </div>
+    </main>
+  </div>
+  <img src="ac.jpeg" id="ac" alt="ac.jpeg">
+  <script src="script.js"></script>
+</body>
+</html>
