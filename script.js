@@ -39,7 +39,7 @@ document.querySelectorAll('#operator').forEach(op => op.onclick = () => {
     display.textContent = sum;
 
   }
-  if (op.textContent != '=')j
+  if (op.textContent != '=')
     operator = op.textContent;
 
   // reset
