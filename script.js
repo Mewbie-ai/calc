@@ -4,20 +4,17 @@ const display_bot = document.getElementById('display_bot')
 const display_mode = document.getElementById('display_mode')
 let back = [], operator = '', number = 0, newNumber, sum = 0;
 
-// const add = (x, y) => x + y
-// const substract = (x, y) => x - y
-// const multiply = (x, y) => x * y
-// const divide = (x, y) => x / y
-
 //num
 document.querySelectorAll('#number').forEach(num => num.onclick = () => {
-  // if (display.textContent != '0')
   if (num.textContent == '0' && display.textContent == '0') return;
   else if(num.textContent == '000' && display.textContent == '') {
     display.textContent = '0';
     return;
   } else if(num.textContent != '0' && display.textContent == '0') {
     display.textContent = '';
+  }
+  if (num.textContent == '.'){
+
   }
   display.textContent += num.textContent;
   sum = display.textContent
@@ -35,11 +32,14 @@ document.querySelectorAll('#operator').forEach(op => op.onclick = () => {
   back = []
   // calculate
   if (number != null && operator != "") {
+    if(operator == '÷' && (number == 0 || newNumber == 0)){
+      return alert('infinity, duh')
+    }
     sum = operate(number, newNumber, operator);
     display.textContent = sum;
 
   }
-  if (op.textContent != '=')
+  if (op.textContent != '=')j
     operator = op.textContent;
 
   // reset
@@ -58,8 +58,8 @@ document.querySelectorAll('#operator').forEach(op => op.onclick = () => {
 })
 
 const operate = (a,b,op) => {
-  a = parseInt(a);
-  b = parseInt(b);
+  a = parseFloat(a);
+  b = parseFloat(b);
   const add = (x, y) => x + y;
   const substract = (x, y) => x - y;
   const multiply = (x, y) => x * y;
@@ -79,7 +79,6 @@ const operate = (a,b,op) => {
 }
 //redo
 document.querySelector('.redo').onclick = () => {
-  console.log(back);
   if(back == '') {
     return
   }
@@ -122,11 +121,14 @@ document.querySelectorAll("#feature").forEach(feat => feat.onclick = () => {
       operator = ''
       break
     case "%":
-      console.log(sum);
-      console.log(sum / 100);
       sum /= 100
-      console.log(sum);
       display.textContent = sum
       break
   }
+})
+
+// keyboard support
+
+window.addEventListener('keydown', (e) => {
+  
 })
